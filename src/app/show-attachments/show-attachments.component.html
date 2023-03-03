@@ -1,0 +1,25 @@
+<div class = 'card'>
+    <div class = 'table-responsive'>
+        <table class = 'table' >
+            <thead>
+                <tr>
+                    <th>Attachment Name</th>
+                    <th>Attachment Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor = 'let attachment of attachments'>
+                    <td>{{attachment.attachmentName}}</td>
+                    <td>{{attachment.attachmentType}}</td>
+                    <td>
+                        <button class = 'btn btn-info' style="margin-left: 10px;" (click)="onClickDownload(attachment.attachmentId)">Download File</button>
+                        <button class = 'btn btn-danger' style="margin-left: 10px;" (click)="onClickDelete(attachment.attachmentId)">Delete File</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+
+</div>
